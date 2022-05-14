@@ -92,7 +92,7 @@ iframe{
     .videos{
         display: flex;
         min-height: 60vh;
-        justify-content: space-between;
+        justify-content: space-around;
     }
     
 
@@ -176,4 +176,21 @@ img{
         width: 150px;
     }
 
+}
+
+
+
+.item1:hover{
+    transform: scale(2);
+    transition: all 2s;
+}
+
+.item2:hover{
+    transform: scale(2);
+    transition: all 2s;
+}
+
+.item3:hover{
+    transform: scale(2);
+    transition: all 2s;
 }
