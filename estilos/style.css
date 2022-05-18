@@ -196,17 +196,41 @@ img{
 **/
 
 body{
-    height: 100vh;
+    height: 110vh;
     background-image: url(../img/city.jpg);
     background-size: cover;
+    
 }
 
-iframe{
-    width: 150px;
-    height: 150px;
-}
+
 
 footer{
     bottom: 0;
     height: 200px;
+    width: 100%;
+}
+
+header{
+    height: 200px;
+    padding: 30px;
+    margin-bottom: 30px;
+    max-width: 100vh;
+}
+ 
+.carousel-inner{
+    border: 8px double rgb(1, 58, 58);
+    height: 400px;
+    margin-bottom: 100px;
+}
+
+.carousel-inner iframe{
+    height: 70vh;
+}
+
+img{
+    margin-bottom: 19px;
+}
+
+.site-footercontact{
+    margin-top: 20px;
 }
