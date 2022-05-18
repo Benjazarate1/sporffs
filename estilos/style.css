@@ -5,7 +5,7 @@
     margin: 0;
 }
 
-
+/*
 body{
     display: flex;
     flex-direction: column;
@@ -193,4 +193,20 @@ img{
 
 }
 
+**/
 
+body{
+    height: 100vh;
+    background-image: url(../img/city.jpg);
+    background-size: cover;
+}
+
+iframe{
+    width: 150px;
+    height: 150px;
+}
+
+footer{
+    bottom: 0;
+    height: 200px;
+}
