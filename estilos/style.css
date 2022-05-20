@@ -46,3 +46,17 @@ img{
 .site-footercontact{
     margin-top: 20px;
 }
+
+.redes i:hover{
+    color: aqua;
+}
+
+nav ul li a{
+    margin: 10px;
+    
+}
+
+nav ul li a:hover{
+    transform: scale(1.5);
+    transition: all 2s;
+}
