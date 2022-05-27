@@ -1,0 +1,59 @@
+img{
+    height: 100px;
+    width: 100px;
+    gap: 15px;
+    margin-bottom: 19px;
+}
+
+.site-body{
+    height: 170vh;
+}
+
+@media (min-width:768px){
+
+.grilla{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 20% 20%;
+    gap: 20px;
+    grid-template-areas: 
+    "educadores paquetes paquetes paquetes"
+    "educadores finales finales finales";
+}
+
+.site-body{
+    height: 170vh;
+}
+
+.galeryForex{
+    grid-area: educadores;
+}
+
+.galeryF2{
+    grid-area: paquetes;
+}
+
+.galeryF3{
+    grid-area: finales;
+}
+
+.tiempo{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.mastiempo{
+    display: flex;
+    justify-content: space-around;
+}
+}
+
+@media (min-width:1024px){
+    .grilla{
+    grid-template-rows: 1fr 1fr;
+}
+.site-body{
+    height: 110vh;
+}
+}

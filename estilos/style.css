@@ -11,12 +11,6 @@ body {
   background-size: cover;
 }
 
-footer {
-  bottom: 0;
-  height: 200px;
-  width: 100%;
-}
-
 header {
   height: 200px;
   padding: 30px;
@@ -24,18 +18,10 @@ header {
   max-width: 100vh;
 }
 
-.carousel-inner {
-  border: 8px double #013a3a;
-  height: 400px;
-  margin-bottom: 100px;
-}
-
-.carousel-inner iframe {
-  height: 70vh;
-}
-
-img {
-  margin-bottom: 19px;
+footer {
+  bottom: 0;
+  height: 200px;
+  width: 100%;
 }
 
 .site-footercontact {
@@ -57,10 +43,21 @@ nav ul li a:hover {
   transition: all 2s;
 }
 
+.carousel-inner {
+  border: 8px double #013a3a;
+  height: 400px;
+  margin-bottom: 100px;
+}
+
+.carousel-inner iframe {
+  height: 70vh;
+}
+
 img {
   height: 100px;
   width: 100px;
   gap: 15px;
+  margin-bottom: 19px;
 }
 
 .site-body {
