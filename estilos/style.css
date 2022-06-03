@@ -6,16 +6,20 @@
 }
 
 body {
-  height: 110vh;
+  height: 100%;
   background-image: url(../img/city.jpg);
   background-size: cover;
 }
 
-header {
-  height: 200px;
-  padding: 30px;
-  margin-bottom: 30px;
-  max-width: 100vh;
+.navbar-collapse {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 footer {
@@ -34,13 +38,6 @@ footer {
 
 nav ul li a {
   margin: 10px;
-}
-
-nav ul li a:hover {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
-  -webkit-transition: all 2s;
-  transition: all 2s;
 }
 
 .carousel-inner {

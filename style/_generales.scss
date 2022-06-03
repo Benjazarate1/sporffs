@@ -6,20 +6,20 @@
 
 
 body{
-    height: 110vh;
+    height: 100%;
     background-image: url(../img/city.jpg);
     background-size: cover;
     
 }
 
 
-
-header{
-    height: 200px;
-    padding: 30px;
-    margin-bottom: 30px;
-    max-width: 100vh;
+.navbar-collapse{
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: center;
 }
+
+
 
 footer{
     bottom: 0;
@@ -42,7 +42,3 @@ nav ul li a{
     
 }
 
-nav ul li a:hover{
-    transform: scale(1.5);
-    transition: all 2s;
-}
