@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Rubik:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Permanent+Marker&family=Roboto:wght@300;400&family=Rubik:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Lobster&family=Permanent+Marker&family=Roboto:wght@300;400&family=Rubik:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Lobster&family=Montserrat:wght@200&family=Permanent+Marker&family=Roboto:wght@300;400&family=Rubik:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Lobster&family=Montserrat:wght@200;400&family=Permanent+Marker&family=Roboto:wght@300;400&family=Rubik:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Dancing+Script:wght@500;700&family=Lobster&family=Montserrat:wght@200;400&family=Permanent+Marker&family=Roboto:wght@300;400&family=Rubik:wght@500&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -38,12 +43,18 @@ footer {
 
 nav ul li a {
   margin: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.font {
+  font-family: 'Montserrat', sans-serif;
 }
 
 .carousel-inner {
   border: 8px double #013a3a;
   height: 400px;
   margin-bottom: 100px;
+  margin-top: 50px;
 }
 
 .carousel-inner iframe {
