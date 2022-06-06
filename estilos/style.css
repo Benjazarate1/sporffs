@@ -31,6 +31,15 @@ footer {
   bottom: 0;
   height: 200px;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .site-footercontact {
@@ -62,71 +71,9 @@ nav ul li a {
 }
 
 img {
-  height: 100px;
-  width: 100px;
-  gap: 15px;
+  height: 70px;
+  width: 70px;
+  gap: 10px;
   margin-bottom: 19px;
-}
-
-.site-body {
-  height: 170vh;
-}
-
-@media (min-width: 768px) {
-  .grilla {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    -ms-grid-rows: 20% 20%;
-        grid-template-rows: 20% 20%;
-    gap: 20px;
-        grid-template-areas: "educadores paquetes paquetes paquetes" "educadores finales finales finales";
-  }
-  .site-body {
-    height: 170vh;
-  }
-  .galeryForex {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 2;
-    -ms-grid-column: 1;
-    grid-area: educadores;
-  }
-  .galeryF2 {
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 3;
-    grid-area: paquetes;
-  }
-  .galeryF3 {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 3;
-    grid-area: finales;
-  }
-  .tiempo {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-  .mastiempo {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-}
-
-@media (min-width: 1024px) {
-  .grilla {
-    -ms-grid-rows: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-  }
-  .site-body {
-    height: 110vh;
-  }
 }
 /*# sourceMappingURL=style.css.map */
