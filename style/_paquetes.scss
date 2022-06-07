@@ -46,5 +46,41 @@ footer{
     align-items: center;
 }
 
+@media(min-width:768px){
+    .grilla{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "educator first first first"
+        "educator second second second"
+        "footer footer footer footer";
+        gap: 10px;
+    
+    }
+
+    .galeryForex{
+        grid-area: educator;
+    }
+
+    .first-time{
+        grid-area: first;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .second-time{
+        grid-area: second;
+        display: flex; 
+        flex-direction: row; 
+        gap: 10px;
+    }
+
+    footer{
+        grid-area: footer;
+    }
+}
+
 
 
