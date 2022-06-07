@@ -50,3 +50,23 @@ nav ul li a{
     font-family: 'Montserrat', sans-serif;
 }
 
+.redes{
+    color: white;
+    font-size: 16px;
+}
+
+.insta{
+    @extend.redes;
+}
+
+.wsp{
+    @extend.redes;
+}
+
+.mail{
+    @extend.redes;
+}
+
+.face{
+    @extend.redes;
+}

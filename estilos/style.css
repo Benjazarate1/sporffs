@@ -46,7 +46,7 @@ footer {
   margin-top: 20px;
 }
 
-.redes i:hover {
+.redes i:hover, .insta i:hover, .wsp i:hover, .mail i:hover, .face i:hover {
   color: aqua;
 }
 
@@ -57,6 +57,11 @@ nav ul li a {
 
 .font {
   font-family: 'Montserrat', sans-serif;
+}
+
+.redes, .insta, .wsp, .mail, .face {
+  color: white;
+  font-size: 16px;
 }
 
 .carousel-inner {
@@ -72,6 +77,7 @@ nav ul li a {
 
 img {
   height: 100px;
+  width: 100px;
 }
 
 .grilla {

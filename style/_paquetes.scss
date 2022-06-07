@@ -1,5 +1,11 @@
+@mixin sizes ($width, $height) {
+    height: $height;
+    width: $width;
+}
+
+
 img{
-   height: 100px;
+   @include sizes(100px, 100px)
 }
 
 
