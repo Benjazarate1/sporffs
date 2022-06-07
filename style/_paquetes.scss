@@ -82,5 +82,19 @@ footer{
     }
 }
 
+$redes:(
+    enviar:rgb(92, 57, 247),
+    borrar:rgb(255, 99, 99),
+);
+@each $red, $color in $redes {
+    .btn--#{$red}{
+        background-color: $color;
+        border-radius: 3px;
+        height: 40px;
+        width: 60px;
+    }
+    
+}
+
 
 

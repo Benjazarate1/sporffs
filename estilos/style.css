@@ -196,4 +196,18 @@ footer {
     grid-area: footer;
   }
 }
+
+.btn--enviar {
+  background-color: #5c39f7;
+  border-radius: 3px;
+  height: 40px;
+  width: 60px;
+}
+
+.btn--borrar {
+  background-color: #ff6363;
+  border-radius: 3px;
+  height: 40px;
+  width: 60px;
+}
 /*# sourceMappingURL=style.css.map */
