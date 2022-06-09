@@ -82,6 +82,8 @@ img {
 
 .card {
   background-color: #57d6ef57;
+  -webkit-box-shadow: 0px 20px 20px black;
+          box-shadow: 0px 20px 20px black;
 }
 
 .grilla {
