@@ -86,6 +86,25 @@ img {
           box-shadow: 0px 20px 20px black;
 }
 
+.name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form-site {
+  border-radius: 10px;
+  border: 3px solid white;
+  background-color: rgba(255, 255, 255, 0.36);
+}
+
 .grilla {
   display: -ms-grid;
   display: grid;
@@ -207,19 +226,5 @@ footer {
     -ms-grid-column-span: 4;
     grid-area: footer;
   }
-}
-
-.btn--enviar {
-  background-color: #5c39f7;
-  border-radius: 3px;
-  height: 40px;
-  width: 60px;
-}
-
-.btn--borrar {
-  background-color: #ff6363;
-  border-radius: 3px;
-  height: 40px;
-  width: 60px;
 }
 /*# sourceMappingURL=style.css.map */
