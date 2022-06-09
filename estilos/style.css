@@ -65,10 +65,12 @@ nav ul li a {
 }
 
 .carousel-inner {
-  border: 8px double #013a3a;
+  border: 8px double #9f9f9f;
   height: 400px;
   margin-bottom: 100px;
   margin-top: 50px;
+  -webkit-box-shadow: 0px 4px 20px black;
+          box-shadow: 0px 4px 20px black;
 }
 
 .carousel-inner iframe {
