@@ -5,7 +5,13 @@
 
 
 img{
-   @include sizes(100px, 100px)
+   @include sizes(100px, 100px);
+   
+}
+
+.card{
+    
+    background-color: #57d6ef57;
 }
 
 

@@ -80,6 +80,10 @@ img {
   width: 100px;
 }
 
+.card {
+  background-color: #57d6ef57;
+}
+
 .grilla {
   display: -ms-grid;
   display: grid;
