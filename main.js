@@ -1,16 +1,9 @@
 
 
-let edad = parseInt(prompt("Ingrese su edad"));
 
+let ingreseNumero = parseInt(prompt("Ingrese un numero"));
 
-if((edad >= 0) && (edad <= 17)){
-    console.log("Eres un niño");
-} else if ((edad >= 18) && (edad <= 40)){
-    console.log("Eres un joven");
-} else if(edad > 40){
-    console.log("Trajiste tu baston?");
-} else {
-    console.log("Esa no es una edad valida")
+for(let i = 1; i <= 10; i++){
+    let resultado = ingreseNumero * i;
+   console.log(`el numero ${ingreseNumero} X ${i} = ${resultado}`);
 }
-
-
