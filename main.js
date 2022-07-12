@@ -1,6 +1,9 @@
 
+cantidadDeCuotas()
 
-let elegirCuotas = prompt("¿En cuantas cuotas realizara el pago?\n"+
+function cantidadDeCuotas() {
+
+    let elegirCuotas = prompt("¿En cuantas cuotas realizara el pago?\n"+
 "1- 3 cuotas\n"+
 "2- 6 cuotas\n"+
 "3- 12 cuotas\n"+
@@ -35,4 +38,5 @@ while(elegirCuotas !== "ESC" && elegirCuotas !== "esc"){
     "3- 12 cuotas\n"+
     "4- 18 cuotas\n"+
     "escriba ESC para terminar su consulta\n");
+}
 }
