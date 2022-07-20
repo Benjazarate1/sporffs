@@ -1,4 +1,15 @@
-cantidadDeCuotas()
+const cursos = [
+        {nombre: `Forex`, precio: 200},
+        {nombre: `Binarias`, precio: 200},
+        {nombre: `Criptomonedas`, precio: 210},
+        {nombre: `Acciones`, precio: 180},    
+];
+
+let search = prompt("¿Que paquete estas buscando?");
+let buscar = cursos.find(el => el.nombre == search);
+console.log(buscar);
+
+cantidadDeCuotas();
 
 function cantidadDeCuotas() {
 
@@ -10,22 +21,22 @@ function cantidadDeCuotas() {
 "escriba ESC para terminar su consulta\n");
 
 while(elegirCuotas !== "ESC" && elegirCuotas !== "esc"){
-    switch(elegirCuotas.toUpperCase()){
+    switch(elegirCuotas){
         case "1":
                 alert("elegiste 3 cuotas")
-                alert("El valor de cada cuota es de 58USD");
+                alert("El valor de cada cuota es de USD");
                 break;
         case "2":
                 alert("elegiste 6 cuotas")
-                alert("El valor de cada cuota es de 63USD");
+                alert("El valor de cada cuota es de USD");
                 break;
         case "3":
                 alert("elegiste 12 cuotas")
-                alert("El valor de cada cuota es de 68USD");
+                alert("El valor de cada cuota es de USD");
                 break;
         case "4":
                 alert("elegiste 18 cuotas")
-                alert("El valor de cada cuota es de 73USD");
+                alert("El valor de cada cuota es de USD");
                 break;
         default:
             alert("Cantidad de cuotas incorrecto");
