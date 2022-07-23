@@ -2,7 +2,7 @@ const cursos = [
         {nombre: `Forex`, precio: 200},
         {nombre: `Binarias`, precio: 200},
         {nombre: `Criptomonedas`, precio: 210},
-        {nombre: `Acciones`, precio: 180},    
+        {nombre: `Acciones`, precio: 180}    
 ];
 
 let search = prompt("¿Que paquete estas buscando?");
@@ -62,4 +62,24 @@ listaPaquetes.splice(listaPaquetes.indexOf(eliminarPaquete),1);
 
 
 console.log(listaPaquetes.join("-"));
+
+const ListaCursos = [
+        {nombre: `Forex`, precio: 200},
+        {nombre: `Binarias`, precio: 200},
+        {nombre: `Criptomonedas`, precio: 210},
+        {nombre: `Acciones`, precio: 180}
+];
+let carrito = [];
+
+function agregar (precio){
+        carrito.push(precio);
+}
+
+agregar();
+
+
+const totalCarrito = ListaCursos.reduce((acumulador, producto) => acumulador + producto.precio , 0);
+console.log(`El total a pagar es ${totalCarrito}`);
+
+
 
