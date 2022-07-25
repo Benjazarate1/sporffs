@@ -54,19 +54,6 @@ while(elegirCuotas !== "ESC" && elegirCuotas !== "esc"){
 }
 
 
-//paquetes
-let listaPaquetes = ["Forex", "Binarias", "Criptomonedas", "Acciones"];
-console.log(`Nuestros paquetes son ${listaPaquetes}`);
-
-let nuevoPaquete = prompt("¿Que paquete te gustaria que SporffsAcademy tuviera?\n" + "Por favor escribir el paquete con la inicial en mayuscula");
-listaPaquetes.push(nuevoPaquete);
-
-let eliminarPaquete = prompt("¿Que paquete crees que SporfssAcademy deberia dejar de enseñar?\n" + "Por favor escribir el paquete con la inicial en mayuscula");
-listaPaquetes.splice(listaPaquetes.indexOf(eliminarPaquete),1);
-
-
-console.log(listaPaquetes.join("-"));
-
 
 //carrito
 const ListaCursos = [
@@ -79,12 +66,13 @@ let carrito = [];
 
 function agregar (precio){
         carrito.push(precio);
+        console.log(carrito);
 }
 
 agregar();
 
 
-const totalCarrito = ListaCursos.reduce((acumulador, producto) => acumulador + producto.precio , 0);
+const totalCarrito = carrito.reduce((acumulador, producto) => acumulador + producto.precio , 0);
 console.log(`El total a pagar es ${totalCarrito}`);
 
 
