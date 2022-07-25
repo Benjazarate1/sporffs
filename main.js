@@ -1,3 +1,4 @@
+//buscar el curso
 const cursos = [
         {nombre: `Forex`, precio: 200},
         {nombre: `Binarias`, precio: 200},
@@ -9,6 +10,7 @@ let search = prompt("¿Que paquete estas buscando?");
 let buscar = cursos.find(el => el.nombre == search);
 console.log(buscar);
 
+//elegir las cuotas
 cantidadDeCuotas();
 
 function cantidadDeCuotas() {
@@ -51,6 +53,8 @@ while(elegirCuotas !== "ESC" && elegirCuotas !== "esc"){
 }
 }
 
+
+//paquetes
 let listaPaquetes = ["Forex", "Binarias", "Criptomonedas", "Acciones"];
 console.log(`Nuestros paquetes son ${listaPaquetes}`);
 
@@ -63,6 +67,8 @@ listaPaquetes.splice(listaPaquetes.indexOf(eliminarPaquete),1);
 
 console.log(listaPaquetes.join("-"));
 
+
+//carrito
 const ListaCursos = [
         {nombre: `Forex`, precio: 200},
         {nombre: `Binarias`, precio: 200},
@@ -81,5 +87,12 @@ agregar();
 const totalCarrito = ListaCursos.reduce((acumulador, producto) => acumulador + producto.precio , 0);
 console.log(`El total a pagar es ${totalCarrito}`);
 
+
+//formulario
+let nombreForm = document.getElementById("nombre").value;
+let apellidoForm = document.getElementById("apellido").value;
+let emailForm = document.getElementById("email").value;
+let consultaForm = document.getElementById("disabledSelect").value;
+let otraConsultaForm = document.getElementById("floatingTextarea").value;
 
 
