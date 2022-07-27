@@ -90,3 +90,9 @@ formulario.addEventListener("submit", (e)=> {
         console.log("Fomulario Enviado")
 });
 
+const text = document.querySelector("textarea");
+
+text.addEventListener("change", ()=>{
+        console.log(`La consulta fue: ${text.value}`);
+})
+
