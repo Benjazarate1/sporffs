@@ -72,7 +72,7 @@ function agregar (precio){
 agregar();
 
 
-const totalCarrito = carrito.reduce((acumulador, producto) => acumulador + producto.precio , 0);
+const totalCarrito = ListaCursos.reduce((acumulador, producto) => acumulador + producto.precio , 0);
 console.log(`El total a pagar es ${totalCarrito}`);
 
 
@@ -83,9 +83,10 @@ let emailForm = document.getElementById("email").value;
 let consultaForm = document.getElementById("disabledSelect").value;
 let otraConsultaForm = document.getElementById("floatingTextarea").value;
 
+
 const formulario = document.querySelector("form");
 formulario.addEventListener("submit", (e)=> {
         e.preventDefault();
-        console.log("Fomulario Enviado");
+        console.log("Fomulario Enviado")
 });
 
