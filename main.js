@@ -83,4 +83,9 @@ let emailForm = document.getElementById("email").value;
 let consultaForm = document.getElementById("disabledSelect").value;
 let otraConsultaForm = document.getElementById("floatingTextarea").value;
 
+const formulario = document.querySelector("form");
+formulario.addEventListener("submit", (e)=> {
+        e.preventDefault();
+        console.log("Fomulario Enviado");
+});
 
