@@ -1,3 +1,4 @@
+/*
 //buscar el curso
 const cursos = [
         {nombre: `Forex`, precio: 200},
@@ -74,25 +75,27 @@ agregar();
 
 const totalCarrito = ListaCursos.reduce((acumulador, producto) => acumulador + producto.precio , 0);
 console.log(`El total a pagar es ${totalCarrito}`);
+*/
+
+//stock
+let stockProductos = [
+        {id: 1, nombre: "UnMes", precio: 200, img:'./img/MES 1.png'},
+        {id: 2, nombre: "DosMeses", precio: 260, img: './img/two months.png'},
+        {id: 3, nombre: "TresMeses", precio: 320, img: './img/three.png'},
+        {id: 4, nombre: "SeisMeses", precio: 400, img: './img/six.png'},
+        {id: 5, nombre: "NueveMeses", precio: 480, img: './img/nine.png'},
+        {id: 6, nombre: "DoceMeses", precio: 560, img: './img/twuelve months.png'},
+];
+
+let carrito = [];
 
 
-//formulario
-let nombreForm = document.getElementById("nombre").value;
-let apellidoForm = document.getElementById("apellido").value;
-let emailForm = document.getElementById("email").value;
-let consultaForm = document.getElementById("disabledSelect").value;
-let otraConsultaForm = document.getElementById("floatingTextarea").value;
+const agregarCarrito = (prodId) => {
+        const item = stockProductos.find ((prod) => prod.id === prodId);
+        carrito.push(item);
+        console.log(carrito);
+}
 
 
-const formulario = document.querySelector("form");
-formulario.addEventListener("submit", (e)=> {
-        e.preventDefault();
-        console.log("Fomulario Enviado")
-});
 
-const text = document.querySelector("textarea");
-
-text.addEventListener("change", ()=>{
-        console.log(`La consulta fue: ${text.value}`);
-})
 
