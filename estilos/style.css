@@ -92,6 +92,10 @@ img {
   width: 100px;
 }
 
+.imageCard {
+  width: 30vh;
+}
+
 .card {
   background-color: #57d6ef57;
   -webkit-box-shadow: 0px 20px 20px black;
@@ -108,6 +112,18 @@ img {
 
 .precioProducto {
   font-weight: 700;
+}
+
+p.precioProducto {
+  font-size: 30px;
+  margin-left: 75px;
+}
+
+.boton-agregar {
+  border-radius: 3px;
+  border: 3px solid black;
+  margin-left: 65px;
+  padding: 3px;
 }
 
 .boton-agregar:hover {
