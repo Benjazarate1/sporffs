@@ -22,6 +22,11 @@ img{
     width: 30vh;
 }
 
+p{
+    font-family: revert;
+    font-size: x-large;
+}
+
 .card{
     
     background-color: #57d6ef57;
@@ -46,6 +51,17 @@ img{
     outline: none;
 }
 
+button.boton-eliminar {
+    border: none;
+    background: transparent;
+    color: rgb(195, 14, 14);
+}
+
+button#carrito-cerrar {
+    border: none;
+    color: rgb(195, 14, 14);
+    margin: 10px;
+}
 
 #barra-carrito{
     background-color: azure;
@@ -57,6 +73,13 @@ img{
     border-left: 4px solid black;
     transition: all 2s;
 }
+
+
+.productoEnCarrito{
+    display: flex;
+    justify-content: space-around;
+}
+
 
 .producto{
     padding: 10px;
@@ -75,10 +98,23 @@ p.precioProducto{
 }
 
 .boton-agregar{
-    border-radius: 3px;
-    border: 3px solid black;
+    color: white;
+    font-size: x-large;
+    border-radius: 5px;
+    border: 3px solid rgb(156, 37, 37);
     margin-left: 65px;
     padding: 3px;
+    background-color: rgb(156, 37, 37);
+}
+
+.boton-comprar{
+    color: white;
+    font-size: x-large;
+    border-radius: 5px;
+    border: 3px solid rgb(156, 37, 37);
+    margin-left: 65px;
+    padding: 3px;
+    background-color: rgb(156, 37, 37);
 }
 
 .boton-agregar:hover{
@@ -189,16 +225,16 @@ footer{
     }
 
     .imageCard{
-        width: 40vh;
+        width: 45vh;
     }
 
     p.precioProducto{
         font-size: 30px;
-        margin-left: 95px;
+        margin-left: 170px;
     }
 
-    .boton-agregar{
-        margin-left: 80px;
+    .boton-comprar{
+        margin-left: 150px;
     }
 }
 

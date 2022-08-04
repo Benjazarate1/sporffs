@@ -1,96 +1,3 @@
-/*
-//buscar el curso
-const cursos = [
-        {nombre: `Forex`, precio: 200},
-        {nombre: `Binarias`, precio: 200},
-        {nombre: `Criptomonedas`, precio: 210},
-        {nombre: `Acciones`, precio: 180}    
-];
-
-let search = prompt("¿Que paquete estas buscando?");
-let buscar = cursos.find(el => el.nombre == search);
-console.log(buscar);
-
-//elegir las cuotas
-cantidadDeCuotas();
-
-function cantidadDeCuotas() {
-
-    let elegirCuotas = prompt("¿En cuantas cuotas realizara el pago?\n"+
-"1- 3 cuotas\n"+
-"2- 6 cuotas\n"+
-"3- 12 cuotas\n"+
-"4- 18 cuotas\n"+
-"escriba ESC para terminar su consulta\n");
-
-while(elegirCuotas !== "ESC" && elegirCuotas !== "esc"){
-    switch(elegirCuotas){
-        case "1":
-                alert("elegiste 3 cuotas")
-                alert("El valor de cada cuota es de USD");
-                break;
-        case "2":
-                alert("elegiste 6 cuotas")
-                alert("El valor de cada cuota es de USD");
-                break;
-        case "3":
-                alert("elegiste 12 cuotas")
-                alert("El valor de cada cuota es de USD");
-                break;
-        case "4":
-                alert("elegiste 18 cuotas")
-                alert("El valor de cada cuota es de USD");
-                break;
-        default:
-            alert("Cantidad de cuotas incorrecto");
-            break;
-    }
-    elegirCuotas = prompt("ingrese otra consulta\n"+
-    "1- 3 cuotas\n"+
-    "2- 6 cuotas\n"+
-    "3- 12 cuotas\n"+
-    "4- 18 cuotas\n"+
-    "escriba ESC para terminar su consulta\n");
-}
-}
-
-
-
-//carrito
-const ListaCursos = [
-        {nombre: `Forex`, precio: 200},
-        {nombre: `Binarias`, precio: 200},
-        {nombre: `Criptomonedas`, precio: 210},
-        {nombre: `Acciones`, precio: 180}
-];
-let carrito = [];
-
-function agregar (precio){
-        carrito.push(precio);
-        console.log(carrito);
-}
-
-agregar();
-
-
-const totalCarrito = ListaCursos.reduce((acumulador, producto) => acumulador + producto.precio , 0);
-console.log(`El total a pagar es ${totalCarrito}`);
-*/
-
-//funciones
-/*
-contenedorCarrito.addEventListener("click", abrirBarra)
-function abrirBarra() {
-        let columna = document.querySelector("#barra-carrito")
-        columna.setAttribute("class","col-3")
-}
-
-contenedorCarrito.addEventListener("click", cerrarBarra)
-function cerrarBarra() {
-        let columna = document.querySelector("#barra-carrito")
-        columna.setAttribute("class" "col-3" "d-none")
-}
-*/
 
 //stock
 let stockProductos = [
@@ -121,6 +28,7 @@ const precioTotal = document.querySelector("#precioTotal")
 
 //funciones
 
+//localstore
 document.addEventListener("DOMContentLoaded", () => {
         if(localStorage.getItem("carrito")){
                 carrito = JSON.parse(localStorage.getItem("carrito"))
@@ -128,30 +36,34 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 })
 
+//abrir panel del carrito
 abrirCarrito.addEventListener("click", abrirBarra)
 function abrirBarra() {
         let columna = document.querySelector("#barra-carrito")
-        columna.setAttribute("class","col-3")
+        columna.setAttribute("class","col-5")
 }
 
+//cerrar panel del carrito
 cerrarCarrito.addEventListener("click", cerrarBarra)
 function cerrarBarra () {
         let columna2 = document.querySelector("#barra-carrito")
-        columna2.setAttribute("class", "col-3 d-none")
+        columna2.setAttribute("class", "col-5 d-none")
 }
 
+//vaciar el carrito
 botonVaciar.addEventListener("click", () => {
         carrito.length = 0
         actualizarCarrito()
 })
 
+//crear los productos y actualizar 
 stockProductos.forEach((producto)=>{
         const div = document.createElement("div")
         div.classList.add("producto")
         div.innerHTML = ` 
         <img class= "imageCard" src=${producto.img} alt="">
         <p class= "precioProducto">$${producto.precio}</p>
-        <button id= "agregar${producto.id}" class= "boton-agregar">COMPRAR <i class="fas fa-shopping-cart"></i></button>
+        <button id= "agregar${producto.id}" class= "boton-comprar">COMPRAR <i class="fas fa-shopping-cart"></i></button>
         `
         contenedorProductos.appendChild(div)
 
@@ -162,23 +74,25 @@ stockProductos.forEach((producto)=>{
         })
 })
 
+//agregar prod al carrito
 const agregarCarrito = (prodId) => {
         const existe = carrito.some (prod => prod.id === prodId)
         if (existe){
-                const producto = carrito.map (prod => {
+                const prod = carrito.map (prod => {
                         if (prod.id === prodId){
                                 prod.cantidad++
                         }
                 })
-        }else{
+        } else {
 
         const item = stockProductos.find ((prod) => prod.id === prodId);
-        carrito.push(item);
-        actualizarCarrito();       
+        carrito.push(item);     
 }
 actualizarCarrito();
 }
 
+
+//eliminar prod del carrito
 const eliminarDelCarrito = (prodId) => {
         const item = carrito.find((prod) => prod.id === prodId)
         const indice = carrito.indexOf(item)
@@ -186,6 +100,7 @@ const eliminarDelCarrito = (prodId) => {
         actualizarCarrito();
 }
 
+//actualizar carrito
 const actualizarCarrito = () => {
         contenedorCarrito.innerHTML = ""
 
@@ -197,7 +112,7 @@ const actualizarCarrito = () => {
                 <p>Nombre: ${prod.nombre}</p>
                 <p>Precio: ${prod.precio}</p>
                 <p>Cantidad: <span id= "cantidad">${prod.cantidad}</span></p>
-                <button onclick = "eliminarDelCarrito(${prod.id})" class= "boton-eliminar"><i class= "fas fa-trash-alt"></i></button>
+                <button onclick = "eliminarDelCarrito(${prod.id})" class= "boton-eliminar"><i class= "fas fa-trash-alt fa-2x"></i></button>
                 `
                 contenedorCarrito.appendChild(div)
 
@@ -206,7 +121,7 @@ const actualizarCarrito = () => {
         })
 
         contadorCarrito.innerText = carrito.length
-        precioTotal.innerText = carrito.reduce((acu, prod) => acu + prod.precio, 0)
+        precioTotal.innerText = carrito.reduce((acu, prod) => acu + prod.precio*prod.cantidad, 0)
 }
 
 
