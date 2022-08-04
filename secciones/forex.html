@@ -37,22 +37,33 @@
                 <a class="nav-link fw-bold text-black"  href="../secciones/contacto.html" >CONTACTO</a>
               </li>
             </ul>
-            <div class="cart-btn p-3 carrito-contenedor">
-              <span class="nav-icon">
-                <i class="fa-solid fa-cart-shopping"></i>
-              </span>
-              <div class="cart-items">0</div>
-            </div>
+              <button id="boton-carrito" class="p-4"><i class="fas fa-shopping-cart"></i> <span id="contadorCarrito">0</span> </button>
           </div>
         </div>
       </nav>
     </header>
 
+     
+
      <section>
       <h1 class="display-4 text-center p-5 fw-bold">FOREX</h1>
      </section>
+
+     <section>
+      <div class="col-3 d-none d-block justify-content-left border-2 border-danger" id="barra-carrito"">
+          <div class="modal-carrito">
+            <button id="carrito-cerrar"><i class="fas fa-times-circle"></i></button>
+            <div id="carrito-contenedor">
+                <!--nada-->
+            </div>
+            <p class="precioProducto">Precio Total: $<span id="precioTotal">0</span></p>
+            <button id="vaciarCarrito" class="boton-agregar">Vaciar Carrito</button>
+            <button id="comprarProducto" class="boton-agregar">Comprar</button>
+          </div>
+      </div>
+     </section>  
      
-    
+     
      <div class="grilla">
       <section class="galeryForex">
         <section class="educator d-flex-column">
@@ -68,10 +79,10 @@
 
      <footer class="bg-dark site-footer text-white text-center">
       <div class="redes">
-       <i class="fa-brands fa-instagram --insta"> Sporffs.ARG | </i> 
-       <i class="fa-brands fa-whatsapp --wsp"> 3517564499 | </i>
-       <i class="fa-solid fa-envelope --mail"> Sporffsarg@gmail.com | </i>
-       <i class="fa-brands fa-facebook --face"> Sporffs.ARG </i>
+        <i class="fa-brands fa-instagram --insta"> Sporffs.ARG | </i> 
+        <i class="fa-brands fa-whatsapp --wsp"> 3517564499 | </i>
+        <i class="fa-solid fa-envelope --mail"> Sporffsarg@gmail.com | </i>
+        <i class="fa-brands fa-facebook --face"> Sporffs.ARG </i>
       </div>
      </footer>
 

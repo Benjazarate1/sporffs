@@ -102,6 +102,35 @@ img {
           box-shadow: 0px 20px 20px black;
 }
 
+#boton-carrito {
+  color: #3a3a3a;
+  border: none;
+  font-size: 30px;
+  background-color: transparent;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+#boton-carrito:hover {
+  cursor: pointer;
+}
+
+#boton-carrito:focus {
+  outline: none;
+}
+
+#barra-carrito {
+  background-color: azure;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  overflow-y: none;
+  border-left: 4px solid black;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
 .producto {
   padding: 10px;
   margin: 10px;
@@ -279,6 +308,16 @@ footer {
     -ms-grid-column: 1;
     -ms-grid-column-span: 4;
     grid-area: footer;
+  }
+  .imageCard {
+    width: 40vh;
+  }
+  p.precioProducto {
+    font-size: 30px;
+    margin-left: 95px;
+  }
+  .boton-agregar {
+    margin-left: 80px;
   }
 }
 /*# sourceMappingURL=style.css.map */

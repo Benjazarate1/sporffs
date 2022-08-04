@@ -77,6 +77,21 @@ const totalCarrito = ListaCursos.reduce((acumulador, producto) => acumulador + p
 console.log(`El total a pagar es ${totalCarrito}`);
 */
 
+//funciones
+/*
+contenedorCarrito.addEventListener("click", abrirBarra)
+function abrirBarra() {
+        let columna = document.querySelector("#barra-carrito")
+        columna.setAttribute("class","col-3")
+}
+
+contenedorCarrito.addEventListener("click", cerrarBarra)
+function cerrarBarra() {
+        let columna = document.querySelector("#barra-carrito")
+        columna.setAttribute("class" "col-3" "d-none")
+}
+*/
+
 //stock
 let stockProductos = [
         {id: 1, nombre: "UnMes", precio: 200, cantidad: 1, img:'../img/MES1.png'},
@@ -92,9 +107,44 @@ let carrito = [];
 //variables
 const contenedorProductos = document.querySelector(".grilla")
 
-const contenedorCarrito = document.querySelector(".carrito-contenedor")
+const contenedorCarrito = document.querySelector("#carrito-contenedor")
+
+const abrirCarrito = document.querySelector("#boton-carrito")
+
+const cerrarCarrito = document.querySelector("#carrito-cerrar")
+
+const botonVaciar = document.querySelector("#vaciarCarrito")
+
+const contadorCarrito = document.querySelector("#contadorCarrito")
+
+const precioTotal = document.querySelector("#precioTotal")
 
 //funciones
+
+document.addEventListener("DOMContentLoaded", () => {
+        if(localStorage.getItem("carrito")){
+                carrito = JSON.parse(localStorage.getItem("carrito"))
+                actualizarCarrito()
+        }
+})
+
+abrirCarrito.addEventListener("click", abrirBarra)
+function abrirBarra() {
+        let columna = document.querySelector("#barra-carrito")
+        columna.setAttribute("class","col-3")
+}
+
+cerrarCarrito.addEventListener("click", cerrarBarra)
+function cerrarBarra () {
+        let columna2 = document.querySelector("#barra-carrito")
+        columna2.setAttribute("class", "col-3 d-none")
+}
+
+botonVaciar.addEventListener("click", () => {
+        carrito.length = 0
+        actualizarCarrito()
+})
+
 stockProductos.forEach((producto)=>{
         const div = document.createElement("div")
         div.classList.add("producto")
@@ -113,10 +163,20 @@ stockProductos.forEach((producto)=>{
 })
 
 const agregarCarrito = (prodId) => {
+        const existe = carrito.some (prod => prod.id === prodId)
+        if (existe){
+                const producto = carrito.map (prod => {
+                        if (prod.id === prodId){
+                                prod.cantidad++
+                        }
+                })
+        }else{
+
         const item = stockProductos.find ((prod) => prod.id === prodId);
         carrito.push(item);
-        actualizarCarrito();
-        console.log(carrito);
+        actualizarCarrito();       
+}
+actualizarCarrito();
 }
 
 const eliminarDelCarrito = (prodId) => {
@@ -140,8 +200,16 @@ const actualizarCarrito = () => {
                 <button onclick = "eliminarDelCarrito(${prod.id})" class= "boton-eliminar"><i class= "fas fa-trash-alt"></i></button>
                 `
                 contenedorCarrito.appendChild(div)
-})
+
+                localStorage.setItem("carrito", JSON.stringify(carrito))
+                
+        })
+
+        contadorCarrito.innerText = carrito.length
+        precioTotal.innerText = carrito.reduce((acu, prod) => acu + prod.precio, 0)
 }
+
+
 
 
 
