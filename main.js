@@ -12,23 +12,28 @@ let stockProductos = [
 let carrito = [];
 
 //variables
-const contenedorProductos = document.querySelector(".grilla")
+const contenedorProductos = document.querySelector(".grilla");
 
-const contenedorCarrito = document.querySelector("#carrito-contenedor")
+const contenedorCarrito = document.querySelector("#carrito-contenedor");
 
-const abrirCarrito = document.querySelector("#boton-carrito")
+const abrirCarrito = document.querySelector("#boton-carrito");
 
-const cerrarCarrito = document.querySelector("#carrito-cerrar")
+const cerrarCarrito = document.querySelector("#carrito-cerrar");
 
-const botonVaciar = document.querySelector("#vaciarCarrito")
+const botonVaciar = document.querySelector("#vaciarCarrito");
 
-const contadorCarrito = document.querySelector("#contadorCarrito")
+const contadorCarrito = document.querySelector("#contadorCarrito");
 
-const precioTotal = document.querySelector("#precioTotal")
+const precioTotal = document.querySelector("#precioTotal");
+
+const comprarProducto = document.querySelector("#comprarProducto");
 
 //funciones
 
 //localstore
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
         if(localStorage.getItem("carrito")){
                 carrito = JSON.parse(localStorage.getItem("carrito"))
@@ -111,6 +116,7 @@ const actualizarCarrito = () => {
                 div.innerHTML = `
                 <p>Nombre: ${prod.nombre}</p>
                 <p>Precio: ${prod.precio}</p>
+                <img class= "cart-image" src="${prod.img}" />
                 <p>Cantidad: <span id= "cantidad">${prod.cantidad}</span></p>
                 <button onclick = "eliminarDelCarrito(${prod.id})" class= "boton-eliminar"><i class= "fas fa-trash-alt fa-2x"></i></button>
                 `
@@ -125,6 +131,14 @@ const actualizarCarrito = () => {
 }
 
 
+comprarProducto.addEventListener("click", ()=>{
+        Swal.fire(
+                'Felicitaciones!',
+                'Compra realizada con éxito!',
+                'success'
+              )
+        
+})
 
 
 
