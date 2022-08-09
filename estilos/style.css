@@ -96,6 +96,13 @@ img {
   width: 30vh;
 }
 
+img.cart-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 3px;
+  border: 3px solid black;
+}
+
 p {
   font-family: revert;
   font-size: x-large;
@@ -148,12 +155,30 @@ button#carrito-cerrar {
   transition: all 2s;
 }
 
+.modal-carrito {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: unset;
+      -ms-flex-align: unset;
+          align-items: unset;
+  gap: 50px;
+}
+
 .productoEnCarrito {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  gap: 20px;
 }
 
 .producto {
