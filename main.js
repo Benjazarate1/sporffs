@@ -107,29 +107,35 @@ const eliminarDelCarrito = (prodId) => {
 
 //actualizar carrito
 const actualizarCarrito = () => {
+
         contenedorCarrito.innerHTML = ""
 
-
         carrito.forEach((prod) => {
+                const {nombre, precio, img, cantidad, id} = prod 
                 const div = document.createElement("div")
                 div.classList.add("productoEnCarrito")
                 div.innerHTML = `
-                <p>Nombre: ${prod.nombre}</p>
-                <p>Precio: ${prod.precio}</p>
-                <img class= "cart-image" src="${prod.img}" />
-                <p>Cantidad: <span id= "cantidad">${prod.cantidad}</span></p>
-                <button onclick = "eliminarDelCarrito(${prod.id})" class= "boton-eliminar"><i class= "fas fa-trash-alt fa-2x"></i></button>
+                <p>Nombre: ${nombre}</p>
+                <p>Precio: ${precio}</p>
+                <img class= "cart-image" src="${img}" />
+                <p>Cantidad: <span id= "cantidad">${cantidad}</span></p>
+                <button onclick = "eliminarDelCarrito(${id})" class= "boton-eliminar"><i class= "fas fa-trash-alt fa-2x"></i></button>
                 `
+
                 contenedorCarrito.appendChild(div)
 
+
+
                 localStorage.setItem("carrito", JSON.stringify(carrito))
+
                 
+
         })
 
         contadorCarrito.innerText = carrito.length
         precioTotal.innerText = carrito.reduce((acu, prod) => acu + prod.precio*prod.cantidad, 0)
-}
 
+}
 
 comprarProducto.addEventListener("click", ()=>{
         Swal.fire(
