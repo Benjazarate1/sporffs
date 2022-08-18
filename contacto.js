@@ -1,39 +1,23 @@
 //formulario
-let nombreForm = document.getElementById("nombre").value;
-let apellidoForm = document.getElementById("apellido").value;
-let emailForm = document.getElementById("email").value;
-let consultaForm = document.getElementById("disabledSelect").value;
-let otraConsultaForm = document.getElementById("floatingTextarea").value;
 const botonEnviar = document.querySelector(".botonForm");
-const formulario = document.querySelector("form");
+const formulario = document.querySelector(".form");
 
-
-
-formulario.addEventListener("submit", (e)=> {
-        e.preventDefault();
-        console.log("Fomulario Enviado")
-});
-
-
-
-
-
-
-
-
-/*
-botonEnviar.onclick = ()=> {
-        handlesubmit();
+formulario.addEventListener('submit', handleSubmit)
+async function handleSubmit(e){
+        e.preventDefault()
+        const form = new FormData(this)
+        const response= await fetch(this.action, {
+                method: this.method,
+                body: form,
+                headers: {
+                        'Accept': 'application/json'
+                }
+        })
+        .catch(error => console.log(error))
+        if(response.ok){
+                this.reset()
+        }
+        
 }
-/*
 
 
-
-
-/*
-const text = document.querySelector("textarea");
-
-text.addEventListener("change", ()=>{
-        console.log(`La consulta fue: ${text.value}`);
-})
-*/

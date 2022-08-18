@@ -61,7 +61,9 @@ botonVaciar.addEventListener("click", () => {
         actualizarCarrito()
 })
 
+
 //crear los productos y actualizar 
+
 stockProductos.forEach((producto)=>{
         const div = document.createElement("div")
         div.classList.add("producto")

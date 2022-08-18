@@ -46,23 +46,16 @@
           <h1 class="display-4 text-center p-5 fw-bold">CONTACTO</h1>
       </section>
 
-
-    <section class="container">
-    <form class="row g-3 form-site mb-4 formContact">
-      <div class="col-md-6">
-        <label for="inputEmail4" class="form-label">Nombre</label>
-        <input type="text" class="form-control" id="nombre">
-      </div>
-      <div class="col-md-6">
-        <label for="inputPassword4" class="form-label">Apellido</label>
-        <input type="text" class="form-control" id="apellido">
-      </div>
-      
-      <div class="col-12">
-        <label for="email" class="form-label">Email</label>
-        <input type="email" class="form-control" id="email">
-      </div>
-     
+      <section class="container">
+        <form class="form"  action="https://formspree.io/f/mbjbjweo" method="POST" class="row g-3 form-site mb-4 formContact"
+          <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre">
+          </div>
+          <div>
+            <label for="inputPassword4" class="form-label">Apellido</label>
+            <input type="text" class="form-control" id="apellido">
+          </div>
           <div class="mb-3">
             <label for="disabledSelect" class="form-label">Consulta</label>
             <select id="disabledSelect" class="form-select">
@@ -71,20 +64,19 @@
               <option>Otras consultas</option>
             </select>
           </div>
-          
-
-      <div class="form-floating">
-        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-        <label for="floatingTextarea">Otra consulta</label>
-      </div>
-
-      <div class="col-12">
-        <button type="submit" class="btn btn-secondary mb-4 botonForm">Enviar</button>
-      </div>
-      
-     </form>
-
-     </section>
+          <div class="form-floating">
+            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+            <label for="floatingTextarea">Otra consulta</label>
+          </div>
+          <div class="col-12">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" name="email"  class="form-control"></label>
+          </div>
+          <div class="col-12">
+          <button type="submit" class="btn btn-secondary mb-4 botonForm">Send</button>
+         </div>
+      </form>
+  </section>
 
 
      <footer class="bg-secondary site-footer text-white text-center">
