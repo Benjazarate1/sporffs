@@ -1,0 +1,8 @@
+ [
+    {"id": 1, "nombre": "UnMes", "precio": 200, "cantidad": 1, "img":"../img/MES1.png"},
+    {"id": 2, "nombre": "DosMeses", "precio": 260, "cantidad": 1, "img": "../img/twomonths.png"},
+    {"id": 3, "nombre": "TresMeses", "precio": 320, "cantidad": 1, "img": "../img/three.png"},
+    {"id": 4, "nombre": "SeisMeses", "precio": 400, "cantidad": 1, "img": "../img/six.png"},
+    {"id": 5, "nombre": "NueveMeses", "precio": 480, "cantidad": 1, "img": "../img/nine.png"},
+    {"id": 6, "nombre": "DoceMeses", "precio": 560, "cantidad": 1, "img": "../img/twuelvemonths.png"}
+]

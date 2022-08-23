@@ -1,15 +1,24 @@
 
 //stock
-let stockProductos = [
-        {id: 1, nombre: "UnMes", precio: 200, cantidad: 1, img:'../img/MES1.png'},
-        {id: 2, nombre: "DosMeses", precio: 260, cantidad: 1, img: '../img/twomonths.png'},
-        {id: 3, nombre: "TresMeses", precio: 320, cantidad: 1, img: '../img/three.png'},
-        {id: 4, nombre: "SeisMeses", precio: 400, cantidad: 1, img: '../img/six.png'},
-        {id: 5, nombre: "NueveMeses", precio: 480, cantidad: 1, img: '../img/nine.png'},
-        {id: 6, nombre: "DoceMeses", precio: 560, cantidad: 1, img: '../img/twuelvemonths.png'},
-];
+let stockProductos = [];
 
-let carrito = [];
+const fetchData = async () => {
+        try{
+                const response = await fetch('../productos.json');
+                const result = await response.json();
+                stockProductos = result;
+        } catch(error){
+                console.log(error)
+        }
+}
+
+(async()=>{
+        await fetchData();
+        product(stockProductos);
+})()
+
+
+let carrito = []
 
 //variables
 const contenedorProductos = document.querySelector(".grilla");
@@ -57,13 +66,14 @@ function cerrarBarra () {
 
 //vaciar el carrito
 botonVaciar.addEventListener("click", () => {
+        localStorage.clear()
         carrito.length = 0
         actualizarCarrito()
 })
 
 
 //crear los productos y actualizar 
-
+function product (){
 stockProductos.forEach((producto)=>{
         const div = document.createElement("div")
         div.classList.add("producto")
@@ -80,7 +90,7 @@ stockProductos.forEach((producto)=>{
                 agregarCarrito(producto.id)
         })
 })
-
+}
 //agregar prod al carrito
 const agregarCarrito = (prodId) => {
         const existe = carrito.some (prod => prod.id === prodId)
