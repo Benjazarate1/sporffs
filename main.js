@@ -37,6 +37,8 @@ const precioTotal = document.querySelector("#precioTotal");
 
 const comprarProducto = document.querySelector("#comprarProducto");
 
+const confirmarCompra = document.querySelector(".confirmarCompra");
+
 //funciones
 
 //localstore
@@ -149,7 +151,14 @@ const actualizarCarrito = () => {
 
 }
 
-comprarProducto.addEventListener("click", ()=>{
+
+comprarProducto.addEventListener("click", datosCompra)
+function datosCompra(){
+        let pay = document.querySelector("#modal-payment")
+        pay.setAttribute("class", "col-5")
+}
+
+confirmarCompra.addEventListener("click", ()=>{
         Swal.fire(
                 'Felicitaciones!',
                 'Compra realizada con éxito!',
