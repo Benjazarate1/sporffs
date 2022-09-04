@@ -39,6 +39,7 @@ const comprarProducto = document.querySelector("#comprarProducto");
 
 const confirmarCompra = document.querySelector(".confirmarCompra");
 
+const payment = document.querySelector("#modal-payment");
 //funciones
 
 //localstore
@@ -151,21 +152,30 @@ const actualizarCarrito = () => {
 
 }
 
-
+//abrir el formulario de pago
 comprarProducto.addEventListener("click", datosCompra)
 function datosCompra(){
         let pay = document.querySelector("#modal-payment")
-        pay.setAttribute("class", "col-5")
+        pay.setAttribute("class", "col-5", "row g-3")
+        let columna2 = document.querySelector("#barra-carrito")
+        columna2.setAttribute("class", "col-5 d-none")
 }
 
-confirmarCompra.addEventListener("click", ()=>{
+confirmarCompra.addEventListener("click", (e)=>{
+        e.preventDefault()
         Swal.fire(
                 'Felicitaciones!',
-                'Compra realizada con éxito!',
+                'su compra fue realizada con exito!',
                 'success'
-              )
+                
+          ) 
+        
         
 })
 
+//cerrar el formulario de pago
+confirmarCompra.addEventListener("click", ()=>{
+        payment.setAttribute("class","col-5 d-none")
+})
 
 

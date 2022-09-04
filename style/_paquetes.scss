@@ -198,6 +198,13 @@ footer{
     align-items: center;
 }
 
+#modal-payment{
+    
+    border-radius: 3px;
+    border: 3px black solid;
+    background-color: azure;
+}
+
 @media(max-width:999px){
     .cart-items{
         display: none;
